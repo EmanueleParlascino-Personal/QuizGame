@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: What's the ideal length for a story based game?
   answers:
-  - 
-  - 
-  - 
-  - 
-  rightAnswer: 0
+  - less than 30 min
+  - 60 hours
+  - 500 hours
+  - There is no ideal length
+  rightAnswer: 3

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Which one of these is foundamental to a rouguelike game?
   answers:
-  - 
-  - 
-  - 
-  - 
-  rightAnswer: 0
+  - Bright colors
+  - Permadeath
+  - Meta progression
+  - A jump mechanic
+  rightAnswer: 1

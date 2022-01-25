@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: What is called the cycle of actions a player performs?
   answers:
-  - 
-  - 
-  - 
-  - 
+  - Gameplay loop
+  - Circular motion
+  - Round pie
+  - None of the above
   rightAnswer: 0
