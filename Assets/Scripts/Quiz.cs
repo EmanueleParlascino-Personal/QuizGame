@@ -25,9 +25,15 @@ public class Quiz : MonoBehaviour
     [SerializeField] Image timerImage;
     Timer timer;
 
+    [Header("Scoring")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
     void Start()
     {
         timer = FindObjectOfType<Timer>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        scoreText.text = "Score: 0%";
     }
 
     void Update() {
@@ -54,6 +60,7 @@ public class Quiz : MonoBehaviour
             questionText.text = "CORRECT!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctSprite;
+            scoreKeeper.IncrementCorrectAnswers();
         }
         else
         {
@@ -68,7 +75,8 @@ public class Quiz : MonoBehaviour
         hasAnsweredEarly = true;
         DisplayAnswer(index);
         SetButtonState(false);
-        timer.CancelTimer();   
+        timer.CancelTimer(); 
+        scoreText.text = "Score: " + scoreKeeper.CalculateScore() +  "%"; 
     }
     
     void GetNextQuestion()
@@ -78,6 +86,7 @@ public class Quiz : MonoBehaviour
             SetDefaultButtonSprite();
             GetRandomQuestion();
             DisplayQuestion();
+            scoreKeeper.IncrementQuestionsSeen();
         }
 
     }
