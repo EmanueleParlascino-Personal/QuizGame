@@ -78,7 +78,8 @@ public class Quiz : MonoBehaviour
             SetDefaultButtonSprite();
             GetRandomQuestion();
             DisplayQuestion();
-        }   
+        }
+           
     }
 
     void GetRandomQuestion()
